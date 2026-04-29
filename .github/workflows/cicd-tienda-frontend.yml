@@ -19,5 +19,7 @@ jobs:
       - name: Construir y subir imagen
         uses: docker/build-push-action@v5
         with:
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/petstore-frontend:latest
+            context: ./frontend 
+            push: true
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/petstore-frontend:latest
+          
